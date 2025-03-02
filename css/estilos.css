@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/*reseteo de valores*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    padding: 10px;
+}
+/*valores generales*/
+h1{
+    font-family: 'Roboto', sans-serif;
+    font-size: 3.5rem;
+    color: #a50c6a;
+    padding-top: 20px;
+    margin-bottom: 40 px;
+    text-align: center;
+}
+h2{
+    font-size: 2rem;
+    color: #212121;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+
+}
+
+.mayuscula{
+    text-transform: uppercase;
+}
+.negrita{
+    font-weight: bold;
+    .thin{
+        font-weight: 200px;
+    }
+}
+.thin{
+    font-weight: 200;
+}
+.boton{
+    
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    border: 1px solid whitesmoke;
+}
+/*Estilos del header*/
+header, footer{
+    background-color: antiquewhite;
+    padding: 10px;
+    ul{
+        list-style: none;
+        
+            a{
+                color: #1d1c1b;
+                text-decoration: none;
+                
+            }
+
+        }
+       
+      
+    }
+    /*estilo para las anclas que estan el footer pero no están dentro de un ul*/
+    a{
+        text-decoration: none
+    }
+    h3,i,p{
+        color: #7b3ab8;
+    }
+    i{
+        font-size: 2rem;
+    }
+    h3{
+        margin-bottom: 10px;
+    }
+    
+header{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    ul{
+        display: flex;
+        li{
+            margin-right: 20px;
+        }
+    }
+         a{
+            color: #1d1c1b;
+            text-decoration: none;
+            font-weight: bold;
+            
+        }
+
+    
+}
+/*Estilos del main del index*/
+.seccionPrincipalIndex{
+    height: 75vh;
+    padding: 10px;
+    background-image: url("../assets/img/Fondo_Imagen_Indez.png");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    h1{
+        color: rgb(161, 29, 111);
+        text-align: left;
+    }
+    p{
+        color: #212121;
+        text-align: bottom;
+        }
+        a{
+            margin-top: 30px;
+        }
+    
+}
+
+.seccionvelascerasoyaIndex{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+   
+    .velaExperta, .Nuestroscolores{
+        text-align: left;
+       
+        padding: 10px;
+        width: 48%;
+        height: 350px;
+        background-image:  linear-gradient(to right top, #efcaf2, #efa7dc7c, #f505918f),url(../assets/img/Indez-fondo\ vela\ experta.jpg);
+        background-position: center;
+        background-size: cover;
+        filter: grayscale(80%) brightness(0.5) contrast(0.5)
+        color: white;
+        h2{
+            color: white;
+            text-align: left;
+        }
+        p{
+            color: white;
+            text-align: left;
+        }
+    }
+    .Nuestroscolores{
+        
+        background-image: url("../assets/img/indez\ fondo\ 2.jpg");
+    }
+}
+@media screen  and (max-width:768 px){
+    .seccionvelascerasoyaIndex {
+        row-gap: 20px;
+        .velaExperta, .Nuestroscolores{
+            width: 100%;
+        }
+     
+    }
+.seccionSucursalesIndex{
+    height: 50vh;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: rgba(241, 184, 255, 0.884);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: rgb(243, 203, 213);
+    /*centrar verticalemente desde el padre*/
+    place-content: center
+    ;
+    h2{
+        color: rgb(255, 255, 255);
+    }
+    p{
+        margin-bottom: 30px;
+    }
+
+}
+
+.seccionClientesIndex{
+    padding: 10px;
+    margin-top: 20px;
+    text-overflow: clip;
+    text-wrap: normal;
+    div{
+        display: inline-block;
+        margin: 10px;
+    }
+        img{
+            width: 150px;
+            height: 110px;
+            margin-right: 20px;
+        }
+        h3{
+            font-size: 2rem;
+        color: #0baa75;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        text-align: center;
+        flex-direction: row;
+        
+        }
+        p{
+            color: black;
+            margin-top: 20px;
+            text-align: center;
+            padding-inline: 10px;
+        display: inline-block;
+        width: 48%;
+        line-height: 1.5;
+        flex-direction: column;
+     }
+
+
+    
+    
+    
+}
+/*estilos página Nosotros*/
+.seccionNosotros{
+    padding: 10px;
+    text-align: center;
+    .contenedor{
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 20px;
+        .parrafoNosotros{
+        text-align: justify;
+        width: 48%;
+        line-height: 1.5;
+        p{
+            margin-bottom: 15px;
+            color: #212121;
+        }
+    }
+    
+      .imagenFondoNosotros{
+        width: 48%;
+        height: 400px;
+        background-image: url("../assets/img/Nosotros-fondo.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        margin-bottom: 20px;
+        display: none;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+      }
+
+    }
+  
+}
+@media screen and (max-width:768px){
+    .seccionNosotros{
+        flex-direction: column-reverse;
+        .contenedor{
+            row-gap: 20px;
+            flex-direction: column-reverse;
+            .parrafoNosotros, .imagenFondoNosotros{
+                width: 100%;
+            }
+            .imagenFondoNosotros{
+                display: none;
+            }
+        
+        }
+    }
+    
+}
+    
+}
+
+.seccionprepararVelas{
+    .videoVelas{
+        text-align: center;
+        width: 600px;
+        height: 400px;
+    }
+    @media screen and(max-width: 768px;) {
+        .videoVelas{
+            width: 100px;
+        }
+        
+    }
+
+}
+/*estilo página Sucursales*/
+.seccionSucursales{
+    padding: 10px;
+    text-align: center;
+    p{
+        padding-inline: 10px;
+    display: inline-flex
+    text-align: justify;
+    width: 48%;
+    line-height: 1.5;
+}
+
+}
+/*Estilos de página productos*/
+/*Ejemplo de position abolsute y relative*/
+.principalProductos{
+    background-color: rgb(247, 243, 236);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    h1{
+        padding-bottom: 20px;
+    }
+    
+    .Galeria{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        row-gap: 20px
+        .item{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 400px;
+            height: 300px;
+            img{
+                width: 70%;
+                object-fit: cover;
+            }
+            h2{
+                font-size: 1rem;
+            }
+        }
+    }
+}
