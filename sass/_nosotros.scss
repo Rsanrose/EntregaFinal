@@ -1,0 +1,53 @@
+/* Página Nosotros */
+
+/* Asegurar que la sección tenga espacio */
+.seccionNosotros {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+/* Alinear contenido correctamente */
+.seccionNosotros .row {
+    display: flex;
+    align-items: center;
+}
+
+/* Ajustar el tamaño de la imagen */
+.imagenNosotros {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efecto al pasar el mouse */
+.imagenNosotros:hover {
+    transform: scale(1.05);
+}
+
+/* Evitar que la imagen se apile debajo en pantallas grandes */
+@media (min-width: 992px) {
+    .seccionNosotros .row {
+        flex-wrap: nowrap;
+    }
+
+    .seccionNosotros .col-lg-6 {
+        flex: 1;
+    }
+}
+
+/* Video responsivo */
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.videoVelas {
+    padding-bottom: 10px;
+    width: 80%;
+    max-width: 800px;
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}

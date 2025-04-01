@@ -1,0 +1,43 @@
+.mapa-container {
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.tabla-sucursales {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.tabla-sucursales th, .tabla-sucursales td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.tabla-sucursales th {
+    background-color: #f8f8f8;
+    font-weight: bold;
+}
+
+.tabla-sucursales tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+$magenta: #d63384;  // Magenta Bootstrap
+$purple: #6f42c1;   // Púrpura Bootstrap
+
+h1, h2 {
+    color: $magenta !important; // Se fuerza el color
+    font-weight: bold;
+    text-align: center;
+}
+
+// Si prefieres cambiar manualmente con clases
+.text-magenta {
+    color: $magenta !important;
+}
+
+.text-purple {
+    color: $purple !important;
+}

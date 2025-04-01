@@ -1,342 +1,640 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-/*reseteo de valores*/
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+/* Estilos del header y footer */
+/*MAPA FLEXBOX ALINEACION*/
+/* Reseteo de valores */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    font-family: 'Roboto', sans-serif;
-    padding: 10px;
+
+body {
+  font-family: "Roboto", sans-serif;
+  padding: 10px;
 }
-/*valores generales*/
-h1{
-    font-family: 'Roboto', sans-serif;
-    font-size: 3.5rem;
-    color: #a50c6a;
-    padding-top: 20px;
-    margin-bottom: 40 px;
-    text-align: center;
+
+/* Valores generales */
+footer {
+  background-color: #eff0ff !important;
 }
-h2{
+
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 4rem;
+  color: #a50c6a;
+  padding-top: 10px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #212121;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.mayuscula {
+  text-transform: uppercase;
+}
+
+.negrita {
+  font-weight: bold;
+}
+
+.thin {
+  font-weight: 200;
+}
+
+.boton {
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+  color: #8d0f72;
+  background-color: rgba(255, 253, 232, 0.9803921569);
+  border: 2px solid #8d0f72;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+.boton:hover {
+  background-color: #8d0f72;
+  color: rgba(255, 253, 232, 0.9803921569);
+  transform: scale(1.1);
+}
+.boton:active {
+  transform: scale(0.95);
+}
+
+.text-magenta {
+  color: #d63384 !important;
+}
+
+.text-purple {
+  color: #6f42c1 !important;
+}
+
+h1, h2 {
+  color: #d63384;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Estilos del header y footer */
+header, footer {
+  background-color: #eff0ff !important;
+  padding: 10px;
+}
+
+header.bg-light, footer.bg-light {
+  background-color: #eff0ff !important;
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+footer {
+  background-color: #eff0ff !important;
+}
+
+header ul, footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header a, footer a {
+  color: #1d1c1b;
+  text-decoration: none;
+}
+
+h3, i, p {
+  color: #7b3ab8;
+}
+
+i {
+  font-size: 3rem;
+}
+
+h3 {
+  margin-bottom: 14px;
+}
+
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header ul {
+  display: flex;
+}
+
+header ul li {
+  margin-right: 10px;
+}
+
+header a {
+  font-weight: bold;
+}
+
+/* Footer en 3 columnas */
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+  gap: 20px;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer-column {
+  padding: 10px;
+}
+.footer-column h3 {
+  font-weight: bold;
+}
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-column a {
+  display: block;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+footer {
+  color: #990e86 !important;
+}
+
+footer a {
+  color: #7a0d5f !important;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #ffefd1;
+}
+
+/* Responsive: Ajuste a 1 columna en móviles */
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr; /* Cambia a 1 columna en móviles */
+  }
+}
+/* Estilos del main del index */
+.seccionPrincipalIndex {
+  height: 75vh;
+  padding: 10px;
+  background: url("../assets/img/Fondo_Imagen_Indez.png") center/cover no-repeat fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.seccionPrincipalIndex h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: rgb(207, 199, 226);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+.seccionPrincipalIndex h1 span {
+  display: block;
+  font-size: 2.8rem;
+}
+.seccionPrincipalIndex .subtitulo {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: rgb(131, 9, 104);
+}
+.seccionPrincipalIndex .boton {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #8d0f72;
+  color: rgba(255, 253, 232, 0.9803921569);
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+.seccionPrincipalIndex .boton:hover {
+  background-color: #5f0a4d;
+}
+@media (max-width: 768px) {
+  .seccionPrincipalIndex h1 {
     font-size: 2rem;
-    color: #212121;
-    margin-top: 20px;
-    margin-bottom: 30px;
-    text-align: center;
-
+  }
+  .seccionPrincipalIndex h1 span {
+    font-size: 2.2rem;
+  }
+  .seccionPrincipalIndex .subtitulo {
+    font-size: 1rem;
+  }
+  .seccionPrincipalIndex .boton {
+    font-size: 0.9rem;
+  }
 }
 
-.mayuscula{
-    text-transform: uppercase;
+/* Sección velas */
+.seccionvelascerasoyaIndex {
+  display: flex;
+  flex-wrap: wrap;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
 }
-.negrita{
-    font-weight: bold;
-    .thin{
-        font-weight: 200px;
-    }
+
+.seccionNuestrosProductosIndex {
+  text-align: center;
+  padding: 20px;
 }
-.thin{
-    font-weight: 200;
+.seccionNuestrosProductosIndex h2 {
+  margin-bottom: 20px;
 }
-.boton{
-    
+.seccionNuestrosProductosIndex .row {
+  justify-content: center;
+}
+.seccionNuestrosProductosIndex .producto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.seccionNuestrosProductosIndex img {
+  width: 100%;
+  max-width: 200px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+.seccionNuestrosProductosIndex img:hover {
+  transform: scale(1.05);
+}
+
+/*Seccion nuestras velas y colores*/
+.velaExperta {
+  text-align: center;
+  padding: 20px;
+  width: 48%;
+  height: 350px;
+  background-image: linear-gradient(to right top, #efcaf2, rgba(239, 167, 220, 0.4862745098), rgba(245, 5, 145, 0.5607843137)), url("../assets/img/Indez-fondo vela experta.jpg");
+  background-position: center;
+  background-size: cover;
+  filter: brightness(1) contrast(1);
+  color: white;
+  border-radius: 10px;
+  transition: all 0.5s ease-in-out;
+}
+.velaExperta:hover {
+  filter: grayscale(30%) brightness(1) contrast(1);
+  transform: scale(1.05);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.Nuestroscolores {
+  text-align: center;
+  padding: 20px;
+  width: 48%;
+  height: 350px;
+  background-image: linear-gradient(to right top, #efcaf2, rgba(239, 167, 220, 0.4862745098), rgba(245, 5, 145, 0.5607843137)), url("../assets/img/indez fondo 2.jpg");
+  background-position: center;
+  background-size: cover;
+  filter: brightness(1) contrast(1);
+  color: white;
+  border-radius: 10px;
+  transition: all 0.5s ease-in-out;
+}
+.Nuestroscolores:hover {
+  filter: grayscale(30%) brightness(1) contrast(1);
+  transform: scale(1.05);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.velaExperta h2, .Nuestroscolores h2,
+.velaExperta p, .Nuestroscolores p {
+  color: white;
+  font-size: 22px;
+  opacity: 0.9;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.velaExperta:hover h2, .Nuestroscolores:hover h2,
+.velaExperta:hover p, .Nuestroscolores:hover p {
+  opacity: 1;
+}
+
+.boton {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  color: #8d0f72;
+  background-color: rgba(255, 253, 232, 0.9803921569);
+  border: 2px solid #8d0f72;
+  border-radius: 8px;
+  margin-top: 15px;
+  transition: all 0.3s ease-in-out;
+}
+.boton:hover {
+  background-color: #8d0f72;
+  color: rgba(255, 253, 232, 0.9803921569);
+  transform: scale(1.1);
+}
+
+.contenedor-boton {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.velaExperta h2, .Nuestroscolores h2,
+.velaExperta p, .Nuestroscolores p {
+  color: white;
+  opacity: 0.9;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.velaExperta:hover h2, .Nuestroscolores:hover h2,
+.velaExperta:hover p, .Nuestroscolores:hover p {
+  opacity: 1;
+}
+
+/* Media queries */
+@media screen and (max-width: 768px) {
+  .seccionvelascerasoyaIndex {
+    row-gap: 10px;
+  }
+  .velaExperta, .Nuestroscolores {
+    width: 100%;
+  }
+}
+/* Sección Sucursales Index */
+.seccionSucursalesIndex {
+  height: 50vh;
+  text-align: center;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: rgba(241, 184, 255, 0.884);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: rgb(243, 203, 213);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .seccionSucursalesIndex {
+    height: auto;
+    padding: 20px;
+  }
+}
+/*Seccion video tutorial*/
+.seccionTutorial {
+  background-color: #eff0ff;
+  padding: 20px;
+  margin-top: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.seccionTutorial iframe {
+  width: 80%;
+  max-width: 560px;
+  height: 315px;
+}
+
+@media (max-width: 768px) {
+  .seccionTutorial {
     padding: 10px;
-    text-decoration: none;
-    display: inline-block;
-    color: white;
-    border: 1px solid whitesmoke;
+  }
+  iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+  }
 }
-/*Estilos del header*/
-header, footer{
-    background-color: antiquewhite;
-    padding: 10px;
-    ul{
-        list-style: none;
-        
-            a{
-                color: #1d1c1b;
-                text-decoration: none;
-                
-            }
-
-        }
-       
-      
-    }
-    /*estilo para las anclas que estan el footer pero no están dentro de un ul*/
-    a{
-        text-decoration: none
-    }
-    h3,i,p{
-        color: #7b3ab8;
-    }
-    i{
-        font-size: 2rem;
-    }
-    h3{
-        margin-bottom: 10px;
-    }
-    
-header{
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    ul{
-        display: flex;
-        li{
-            margin-right: 20px;
-        }
-    }
-         a{
-            color: #1d1c1b;
-            text-decoration: none;
-            font-weight: bold;
-            
-        }
-
-    
+/*Seccion Clientes Index*/
+.seccionClientesIndex {
+  background-color: #f9f9f9;
+  width: 100vw;
+  margin: 0;
+  padding: 40px 0;
 }
-/*Estilos del main del index*/
-.seccionPrincipalIndex{
-    height: 75vh;
-    padding: 10px;
-    background-image: url("../assets/img/Fondo_Imagen_Indez.png");
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-
-    h1{
-        color: rgb(161, 29, 111);
-        text-align: left;
-    }
-    p{
-        color: #212121;
-        text-align: bottom;
-        }
-        a{
-            margin-top: 30px;
-        }
-    
+.seccionClientesIndex h2 {
+  color: #8d0f72;
+  font-size: 1.8rem;
+}
+.seccionClientesIndex .cliente-card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+.seccionClientesIndex .cliente-card:hover {
+  transform: scale(1.05);
+}
+.seccionClientesIndex .cliente-card h3 {
+  color: #8d0f72;
+  margin-top: 15px;
+}
+.seccionClientesIndex .cliente-card p {
+  color: #333;
+  font-size: 0.95rem;
+}
+.seccionClientesIndex .cliente-card .cliente-img {
+  width: 100px;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #8d0f72;
 }
 
-.seccionvelascerasoyaIndex{
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 20px;
-   
-    .velaExperta, .Nuestroscolores{
-        text-align: left;
-       
-        padding: 10px;
-        width: 48%;
-        height: 350px;
-        background-image:  linear-gradient(to right top, #efcaf2, #efa7dc7c, #f505918f),url(../assets/img/Indez-fondo\ vela\ experta.jpg);
-        background-position: center;
-        background-size: cover;
-        filter: grayscale(80%) brightness(0.5) contrast(0.5)
-        color: white;
-        h2{
-            color: white;
-            text-align: left;
-        }
-        p{
-            color: white;
-            text-align: left;
-        }
-    }
-    .Nuestroscolores{
-        
-        background-image: url("../assets/img/indez\ fondo\ 2.jpg");
-    }
-}
-@media screen  and (max-width:768 px){
-    .seccionvelascerasoyaIndex {
-        row-gap: 20px;
-        .velaExperta, .Nuestroscolores{
-            width: 100%;
-        }
-     
-    }
-.seccionSucursalesIndex{
-    height: 50vh;
-    text-align: center;
-    padding: 10px;
-    margin-top: 20px;
-    background-color: rgba(241, 184, 255, 0.884);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: rgb(243, 203, 213);
-    /*centrar verticalemente desde el padre*/
-    place-content: center
-    ;
-    h2{
-        color: rgb(255, 255, 255);
-    }
-    p{
-        margin-bottom: 30px;
-    }
-
+/* Página Nosotros */
+/* Asegurar que la sección tenga espacio */
+.seccionNosotros {
+  padding: 60px 0;
+  background-color: #f8f9fa;
 }
 
-.seccionClientesIndex{
-    padding: 10px;
-    margin-top: 20px;
-    text-overflow: clip;
-    text-wrap: normal;
-    div{
-        display: inline-block;
-        margin: 10px;
-    }
-        img{
-            width: 150px;
-            height: 110px;
-            margin-right: 20px;
-        }
-        h3{
-            font-size: 2rem;
-        color: #0baa75;
-        margin-top: 20px;
-        margin-bottom: 30px;
-        text-align: center;
-        flex-direction: row;
-        
-        }
-        p{
-            color: black;
-            margin-top: 20px;
-            text-align: center;
-            padding-inline: 10px;
-        display: inline-block;
-        width: 48%;
-        line-height: 1.5;
-        flex-direction: column;
-     }
-
-
-    
-    
-    
-}
-/*estilos página Nosotros*/
-.seccionNosotros{
-    padding: 10px;
-    text-align: center;
-    .contenedor{
-        display: flex;
-        flex-wrap: wrap;
-        column-gap: 20px;
-        .parrafoNosotros{
-        text-align: justify;
-        width: 48%;
-        line-height: 1.5;
-        p{
-            margin-bottom: 15px;
-            color: #212121;
-        }
-    }
-    
-      .imagenFondoNosotros{
-        width: 48%;
-        height: 400px;
-        background-image: url("../assets/img/Nosotros-fondo.jpg");
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        margin-bottom: 20px;
-        display: none;
-        img{
-            width: 100%;
-            height: 100%;
-        }
-      }
-
-    }
-  
-}
-@media screen and (max-width:768px){
-    .seccionNosotros{
-        flex-direction: column-reverse;
-        .contenedor{
-            row-gap: 20px;
-            flex-direction: column-reverse;
-            .parrafoNosotros, .imagenFondoNosotros{
-                width: 100%;
-            }
-            .imagenFondoNosotros{
-                display: none;
-            }
-        
-        }
-    }
-    
-}
-    
+/* Alinear contenido correctamente */
+.seccionNosotros .row {
+  display: flex;
+  align-items: center;
 }
 
-.seccionprepararVelas{
-    .videoVelas{
-        text-align: center;
-        width: 600px;
-        height: 400px;
-    }
-    @media screen and(max-width: 768px;) {
-        .videoVelas{
-            width: 100px;
-        }
-        
-    }
-
-}
-/*estilo página Sucursales*/
-.seccionSucursales{
-    padding: 10px;
-    text-align: center;
-    p{
-        padding-inline: 10px;
-    display: inline-flex
-    text-align: justify;
-    width: 48%;
-    line-height: 1.5;
+/* Ajustar el tamaño de la imagen */
+.imagenNosotros {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
 }
 
+/* Efecto al pasar el mouse */
+.imagenNosotros:hover {
+  transform: scale(1.05);
 }
-/*Estilos de página productos*/
-/*Ejemplo de position abolsute y relative*/
-.principalProductos{
-    background-color: rgb(247, 243, 236);
-    padding-top: 30px;
-    padding-bottom: 30px;
-    h1{
-        padding-bottom: 20px;
-    }
-    
-    .Galeria{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        align-items: center;
-        row-gap: 20px
-        .item{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 400px;
-            height: 300px;
-            img{
-                width: 70%;
-                object-fit: cover;
-            }
-            h2{
-                font-size: 1rem;
-            }
-        }
-    }
+
+/* Evitar que la imagen se apile debajo en pantallas grandes */
+@media (min-width: 992px) {
+  .seccionNosotros .row {
+    flex-wrap: nowrap;
+  }
+  .seccionNosotros .col-lg-6 {
+    flex: 1;
+  }
 }
+/* Video responsivo */
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.videoVelas {
+  padding-bottom: 10px;
+  width: 80%;
+  max-width: 800px;
+  height: 400px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Galería */
+.principalProductos {
+  background-color: rgb(247, 243, 236);
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.Galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  row-gap: 10px;
+}
+
+.principalProductos {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f8f9fa;
+}
+.principalProductos h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #8A2BE2;
+}
+
+.Galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.Galeria .item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background: white;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+.Galeria .item img {
+  width: 100%;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.Galeria .item h2 {
+  font-size: 1.2rem;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.Galeria .item:hover {
+  transform: scale(1.05);
+}
+.Galeria .item:hover img {
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+.Galeria .item:hover h2 {
+  opacity: 1;
+}
+
+.gradiente {
+  background-image: linear-gradient(to top, #ee94c8, #fc9db8, #ffaaad, #ffb9a8, #fec8a9, #fcd1ae, #fad9b5, #f8e1bd, #fae5c2, #fbe8c7, #fdeccc, #ffefd1);
+}
+
+.mapa-container {
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.tabla-sucursales {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.tabla-sucursales th, .tabla-sucursales td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.tabla-sucursales th {
+  background-color: #f8f8f8;
+  font-weight: bold;
+}
+
+.tabla-sucursales tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+h1, h2 {
+  color: #d63384 !important;
+  font-weight: bold;
+  text-align: center;
+}
+
+.text-magenta {
+  color: #d63384 !important;
+}
+
+.text-purple {
+  color: #6f42c1 !important;
+}/*# sourceMappingURL=estilos.css.map */

@@ -1,0 +1,34 @@
+/* Estilos del header y footer */
+$color-header-footer: #eff0ff; 
+
+
+$color-title: #a50c6a;
+$color-claro: #fff6ee;
+$tamanio-espaciado-corto: 10px;
+$tamanio-espaciado-mediano: 20px;
+$tamanio-espaciado-grande: 40px;
+
+
+
+
+/*MAPA FLEXBOX ALINEACION*/
+
+$flexbox-alineacion: (
+"centro": center,
+"espacio-entre": space-between,
+"espacio-alrededor": space-around,
+"espacio-interno": space-evenly,
+"flex-start": flex-start,
+"flex-end": flex-end);
+
+
+$estilos: (
+  color: #3673D9,
+  centro: center,
+  tFuente: 35px,
+  1rem : 1rem
+);
+
+
+
+
