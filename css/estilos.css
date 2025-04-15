@@ -82,6 +82,30 @@ h1, h2 {
   text-align: center;
 }
 
+.whatsapp-float {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 1050;
+  background-color: #25D366;
+  color: #fff;
+  border-radius: 50%;
+  padding: 0.85rem;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+}
+.whatsapp-float:hover {
+  text-decoration: none;
+  transform: scale(1.1);
+  color: #fff;
+}
+.whatsapp-float i {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 /* Estilos del header y footer */
 header, footer {
   background-color: #eff0ff !important;

@@ -72,3 +72,30 @@ h1, h2 {
     font-weight: bold;
     text-align: center;
 }
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 1050; // por encima del navbar fijo si lo usas
+    background-color: #25D366;
+    color: #fff;
+    border-radius: 50%;
+    padding: 0.85rem;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+  
+    &:hover {
+      text-decoration: none;
+      transform: scale(1.1);
+      color: #fff;
+    }
+  
+    i {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+  
