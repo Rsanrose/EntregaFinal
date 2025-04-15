@@ -1,0 +1,101 @@
+/* Valores generales */
+footer {
+    background-color: $color-header-footer !important;
+}
+
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 4rem;
+    color: $color-title;
+    padding-top: $tamanio-espaciado-corto;
+    margin-bottom: 40px; 
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #212121;
+    margin-top: $tamanio-espaciado-corto;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.mayuscula {
+    text-transform: uppercase;
+}
+
+.negrita {
+    font-weight: bold;
+}
+
+.thin {
+    font-weight: 200;
+}
+
+.boton {
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    color: #8d0f72;  // Color del texto
+    background-color: #fffde8fa;  // Fondo del botón
+    border: 2px solid #8d0f72;  // Borde del botón
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        background-color: #8d0f72;  // Fondo morado al pasar el mouse
+        color: #fffde8fa;  // Texto claro
+        transform: scale(1.1);  // Aumenta un poco el tamaño
+    }
+
+    &:active {
+        transform: scale(0.95);  // Pequeño efecto al hacer clic
+    }
+}
+// Definir colores personalizados
+$magenta: #d63384;  // Magenta Bootstrap
+$purple: #6f42c1;   // Púrpura Bootstrap
+
+.text-magenta {
+    color: $magenta !important;
+}
+
+.text-purple {
+    color: $purple !important;
+}
+
+// Aplicar estilos a los títulos
+h1, h2 {
+    color: $magenta; // O usa $purple si prefieres el tono morado
+    font-weight: bold;
+    text-align: center;
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 1050; // por encima del navbar fijo si lo usas
+    background-color: #25D366;
+    color: #fff;
+    border-radius: 50%;
+    padding: 0.85rem;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+  
+    &:hover {
+      text-decoration: none;
+      transform: scale(1.1);
+      color: #fff;
+    }
+  
+    i {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+  

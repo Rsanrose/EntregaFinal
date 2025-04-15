@@ -1,0 +1,80 @@
+
+/* Galería */
+.principalProductos {
+    background-color: rgb(247, 243, 236);
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.Galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    row-gap: $tamanio-espaciado-corto;
+}
+
+.principalProductos {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f8f9fa;
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: #8A2BE2;
+    }
+}
+
+.Galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        background: white;
+        text-align: center;
+        transition: transform 0.3s ease-in-out;
+
+        img {
+            width: 100%;
+            height: 250px;  // Tamaño fijo
+            object-fit: cover; // Asegura que la imagen cubra el espacio sin distorsionarse
+            border-radius: 10px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            margin: 0;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        &:hover {
+            transform: scale(1.05);
+            
+            img {
+                opacity: 0.8;
+                transform: scale(1.1);
+            }
+
+            h2 {
+                opacity: 1;
+            }
+        }
+    }
+}

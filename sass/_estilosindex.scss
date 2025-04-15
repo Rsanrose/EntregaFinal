@@ -1,0 +1,322 @@
+/* Estilos del main del index */
+.seccionPrincipalIndex {
+    height: 75vh;
+    padding: 10px;
+    background: url("../assets/img/Fondo_Imagen_Indez.png") center/cover no-repeat fixed;
+    display: flex;
+    flex-direction: column; // Organiza los elementos en columna
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: rgb(207, 199, 226);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+        span { // Para "ESPACIO FAVORITO"
+            display: block; // Hace que "ESPACIO FAVORITO" quede en una línea separada
+            font-size: 2.8rem;
+        }
+    }
+
+    .subtitulo {
+        font-size: 1.2rem;
+        margin-top: 10px;
+        color: rgb(131, 9, 104);
+    }
+
+    .boton {
+        margin-top: 15px;
+        padding: 10px 20px;
+        background-color: #8d0f72;
+        color: #fffde8fa;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background 0.3s ease;
+
+        &:hover {
+            background-color: darken(#8d0f72, 10%);
+        }
+    }
+
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 2rem;
+
+            span {
+                font-size: 2.2rem;
+            }
+        }
+
+        .subtitulo {
+            font-size: 1rem;
+        }
+
+        .boton {
+            font-size: 0.9rem;
+        }
+    }
+}
+
+
+/* Sección velas */
+.seccionvelascerasoyaIndex {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: $tamanio-espaciado-corto;
+}
+
+.seccionNuestrosProductosIndex {
+    text-align: center;
+    padding: 20px;
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    .row {
+        justify-content: center; // Centra las columnas si son más pequeñas
+    }
+
+    .producto {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+    img {
+        width: 100%; // Se adapta al tamaño de la columna
+        max-width: 200px; // Tamaño máximo de la imagen
+        height: 200px;
+        object-fit: cover; // Mantiene la proporción sin deformar
+        border-radius: 10px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}
+
+ 
+/*Seccion nuestras velas y colores*/
+.velaExperta {
+    text-align: center;
+    padding: 20px;
+    width: 48%;
+    height: 350px;
+    background-image: linear-gradient(to right top, #efcaf2, #efa7dc7c, #f505918f), 
+                      url("../assets/img/Indez-fondo\ vela\ experta.jpg");
+    background-position: center;
+    background-size: cover;
+    filter: brightness(1) contrast(1);  
+    color: white;
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+        filter: grayscale(30%) brightness(1) contrast(1);
+        transform: scale(1.05);
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    }
+}
+
+.Nuestroscolores {
+    text-align: center;
+    padding: 20px;
+    width: 48%;
+    height: 350px;
+    background-image: linear-gradient(to right top, #efcaf2, #efa7dc7c, #f505918f), 
+                      url("../assets/img/indez\ fondo\ 2.jpg");
+    background-position: center;
+    background-size: cover;
+    filter: brightness(1) contrast(1);  
+    color: white;
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+        filter: grayscale(30%) brightness(1) contrast(1);
+        transform: scale(1.05);
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    }
+}
+
+.velaExperta h2, .Nuestroscolores h2,
+.velaExperta p, .Nuestroscolores p {
+    color: white;
+    font-size: 22px; 
+    opacity: 0.9;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.velaExperta:hover h2, .Nuestroscolores:hover h2,
+.velaExperta:hover p, .Nuestroscolores:hover p {
+    opacity: 1;
+}
+
+// Estilos para el botón
+.boton {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 18px;  
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    color: #8d0f72;
+    background-color: #fffde8fa;
+    border: 2px solid #8d0f72;
+    border-radius: 8px;
+    margin-top: 15px;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        background-color: #8d0f72;
+        color: #fffde8fa;
+        transform: scale(1.1);
+    }
+}
+
+// Centrando el botón
+.contenedor-boton {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+.velaExperta h2, .Nuestroscolores h2,
+.velaExperta p, .Nuestroscolores p {
+    color: white;
+    opacity: 0.9;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.velaExperta:hover h2, .Nuestroscolores:hover h2,
+.velaExperta:hover p, .Nuestroscolores:hover p {
+    opacity: 1;  // Hace que el texto se vea más claro al pasar el mouse
+}
+
+
+/* Media queries */
+@media screen and (max-width: 768px) {
+    .seccionvelascerasoyaIndex {
+        row-gap: $tamanio-espaciado-corto;
+    }
+
+    .velaExperta, .Nuestroscolores {
+        width: 100%;
+    }
+}
+/* Sección Sucursales Index */
+.seccionSucursalesIndex {
+    height: 50vh;
+    text-align: center;
+    padding: $tamanio-espaciado-corto; 
+    margin-top: $tamanio-espaciado-corto;
+    background-color: rgba(241, 184, 255, 0.884);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: rgb(243, 203, 213);
+
+    // Aplicación de flexbox sin @extend
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+// Ajuste responsivo opcional (para asegurar buena visibilidad en móviles)
+@media (max-width: 768px) {
+    .seccionSucursalesIndex {
+        height: auto;
+        padding: $tamanio-espaciado-mediano;
+    }
+}
+
+/*Seccion video tutorial*/
+.seccionTutorial {
+    background-color: #eff0ff;
+    padding: 20px;
+    margin-top: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    iframe {
+        width: 80%;  // Ajusta el ancho para que sea flexible
+        max-width: 560px; // No crecerá más de 560px
+        height: 315px;
+    }
+}
+
+// Responsividad para pantallas más pequeñas
+@media (max-width: 768px) {
+    .seccionTutorial {
+        padding: $tamanio-espaciado-corto;
+    }
+
+    iframe {
+        width: 100%;  // Se ajusta al contenedor en móviles
+        height: auto;
+        aspect-ratio: 16/9; // Mantiene la proporción del video
+    }
+}
+
+
+
+/*Seccion Clientes Index*/
+.seccionClientesIndex {
+    background-color: #f9f9f9; // Gris muy claro
+    width: 100vw; // Ocupa todo el ancho de la pantalla
+    margin: 0; // Asegura que no haya márgenes laterales
+    padding: 40px 0;
+
+    h2 {
+        color: #8d0f72;
+        font-size: 1.8rem;
+    }
+
+    .cliente-card {
+        background: #ffffff;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.3s ease-in-out;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        h3 {
+            color: #8d0f72;
+            margin-top: 15px;
+        }
+
+        p {
+            color: #333;
+            font-size: 0.95rem;
+        }
+
+        .cliente-img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #8d0f72;
+        }
+    }
+}
+
+

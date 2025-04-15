@@ -1,0 +1,13 @@
+@mixin flex-direction-center($direction){
+    display:flex;
+    flex-direction:$direction;
+    justify-content:center;
+}
+
+@mixin flex-alineacion($direction, $justify, $align){
+    /*este es el codigo del mixin*/
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}

@@ -3,58 +3,86 @@
     <head><!--es la etiqueta de las configuraciones del navegador-->
         <meta charset="UTF-8"><!--el atributo charset con el valor utfs que le indica la codificación de los caracteres, me permite escribir con ñ, los acentos-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--la etiqueta de responsive-->
+        <meta name="description" content="Velas artesanales hechas y pintadas a mano, con escencia que perduran y transforman cualquier espacio con aromas relajantes">
+        <meta name="keywords" content="Velas artesanales, velas con aroma, artesanales, velas con forma, velas aromaticas, velas para recordatorios, recordatorios en cera de soya">
         <title>Encanto encendido | Coderhouse</title>
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <!-- Agregar Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
         <link rel="stylesheet" href="./css/estilos.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
     </head>
 <!--body es el contenidoprincipal de la página-->
     <body>
-        <header>
-               <img src="./assets/img/logo-velas.png"  alt="Logo de velas aromaticas" width="80px">
-               <nav>
-                <ul>
-                    <li>
-                        <a href="#index.html">Inicio</a>
-                    </li>
-                    <li>
-                        <a href="./pages/contacto.html">Contacto</a>
-                    </li>
-                    <li>
-                        <a href="./pages/productos.html">Productos</a>
-                    </li>
-                    <li>
-                        <a href="./pages/nosotros.html">Nosotros</a>
-                    </li>
-                    <li>
-                        <a href="./pages/sucursales.html">Sucursales</a>
-                    </li>
-                </ul>
-               </nav>
-
-        
-            <!--nav es la etiqueta para crear un menu-->
-
+        <header class="bg-light">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="./assets/img/logo-velas.png" alt="Logo de velas aromaticas" width="80px">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion"
+                        aria-controls="menuNavegacion" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="menuNavegacion">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./pages/contacto.html">Contacto</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./pages/productos.html">Productos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./pages/nosotros.html">Nosotros</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./pages/sucursales.html">Sucursales</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
         </header>
+        
         <main>
             <section class="seccionPrincipalIndex">
                 <h1 class="thin">
-                    Velas para cada rincón de tu <div class="mayuscula negrita"> ESPACIO FAVORITO</div>
-                    </h1>
-                    <p>Encuentra velas y aromas ideales para ti</p>
-                    <a class="mayuscula boton" href="./pages/productos.html">Revisa los últimos diseños</a>
-                   
+                    Velas para cada rincón de tu 
+                    <br> <!-- Salto de línea para evitar problemas -->
+                    <span class="mayuscula negrita">ESPACIO FAVORITO</span>
+                </h1>
+                
+                <p class="subtitulo">Encuentra velas y aromas ideales para ti</p>
+                
+                <a class="mayuscula boton" href="./pages/productos.html">Revisa los últimos diseños</a>
+            </section>
+            
+                <section class="seccionNuestrosProductosIndex">
+                    <h2>Nuestros productos</h2>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3 producto">
+                                <img src="./assets/img/osito velas.jpg" alt="Osito velas">
+                            </div>
+                            <div class="col-md-3 producto">
+                                <img src="./assets/img/rosa en blanco.jpg" alt="Rosa blanca">
+                            </div>
+                            <div class="col-md-3 producto">
+                                <img src="./assets/img/rosas catalogo.jpg" alt="Rosas catalogo">
+                            </div>
+                            <div class="col-md-3 producto">
+                                <img src="./assets/img/index fondo 1.jpg" alt="Oso primavera">
+                            </div>
+                        </div>
+                    </div>
                 </section>
-                    <section class="seccionNuestrosProductosIndex">
-                        <h2>Nuestros productos</h2>
-                        <img src="./assets/img/osito velas.jpg" alt="Osito velas"
-                        >
-                        <img src=".//assets/img/rosa en blanco.jpg" alt="Rosa blanca"
-                        >
-                        <img src="./assets/img/rosas catalogo.jpg" alt="Rosas catalogo"
-                        >
-                        <img src="./assets/img/vvatalogo primaveta.jpg" alt="Catalogo primavera"
-                        >
-                    </section>
                     <section class="seccionvelascerasoyaIndex">
                         <div class="velaExperta">
                             <p>Aprende a como perdurar el aroma</p>
@@ -68,90 +96,101 @@
                         </div>
                     </section>
                     <section class="seccionSucursalesIndex">
-                        <h2>
-                                Siempre hay más
-                        </h2>
+                
                         <h2>
                             Velas para tus espacios favoritos
                             <p>Encuentra tu tienda más cercana</p>
                             <a class="boton" href="">Ingresar</a>
                         </h2>
                     </section>
-                    <section>
-                        <h2>Como realizar velas en forma de oso con cera de soja</h2>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/joj8GlMmw2U?si=6wU9dLYQo1uh5rVC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <section class="seccionTutorial">
+                        <h2>Cómo realizar velas en forma de oso con cera de soja</h2>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/joj8GlMmw2U?si=6wU9dLYQo1uh5rVC" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
                     </section>
-                    <section class="seccionClientesIndex">
-                      <h2>Conoce las opiniones de nuestros clientes</h2> 
-                      <div>
-                        <img src="./assets/img/Cliente 1.PNG" alt="imagen de un cliente">
-                        <h3>Amelia</h3>
-                        <p>Me encanta la calidad y el aroma de cada vela</p>
-                      </div>
-                      <div>
-                        <img src="./assets/img/Cliente 2.PNG" alt="imagen de un cliente">
-                        <h3>Samuel</h3>
-                        <p>Los detalles y el cuidado que se le pone a cada producto estoy encantado</p>
-                        
-                      </div>
-                      <div>
-                        <img src="./assets/img/Cliente 3.PNG" alt="imagen de un cliente">
-                        <h3>Leyla</h3>
-                        <p>Mis amigos no dejan de preguntarme por la marca, amo cada esencia por que mantiene mis espacios perfumados</p>
-                      </div>
-                      <div>
-                        <img src="./assets/img/Cliente 4.PNG" alt="imagen de un cliente">
-                        <h3>Milena</h3>
-                        <p>Amo los diseños y lo tiernas que son estas velas, no quiero encender ninguna para que me duren siempre</p>
-                      </div>
+                    <section class="seccionClientesIndex container-fluid">
+                        <h2 class="text-center mb-4">Conoce las opiniones de nuestros clientes</h2> 
+                        <div class="row justify-content-center">
+                            <div class="col-md-3 col-sm-6 cliente-card">
+                                <img src="./assets/img/Cliente 1.PNG" alt="imagen de un cliente" class="cliente-img">
+                                <h3>Amelia</h3>
+                                <p>Me encanta la calidad y el aroma de cada vela</p>
+                            </div>
+                            <div class="col-md-3 col-sm-6 cliente-card">
+                                <img src="./assets/img/Cliente 2.PNG" alt="imagen de un cliente" class="cliente-img">
+                                <h3>Samuel</h3>
+                                <p>Los detalles y el cuidado que se le pone a cada producto, estoy encantado</p>
+                            </div>
+                            <div class="col-md-3 col-sm-6 cliente-card">
+                                <img src="./assets/img/Cliente 3.PNG" alt="imagen de un cliente" class="cliente-img">
+                                <h3>Leyla</h3>
+                                <p>Mis amigos no dejan de preguntarme por la marca, amo cada esencia porque mantiene mis espacios perfumados</p>
+                            </div>
+                            <div class="col-md-3 col-sm-6 cliente-card">
+                                <img src="./assets/img/Cliente 4.PNG" alt="imagen de un cliente" class="cliente-img">
+                                <h3>Milena</h3>
+                                <p>Amo los diseños y lo tiernas que son estas velas, no quiero encender ninguna para que me duren siempre</p>
+                            </div>
+                        </div>
                     </section>
-
-
-
-            
-
         </main>
-        <footer>
-            <img src="./assets/img/logo-velas.png"  alt="Logo de velas aromaticas" width="80px">
-            <div>
-                <h3>Contenidos</h3>
-                <ul>
-                <li><a href="#index.html">Inicio</a></li>
-                <li><a href="./pages/contacto.html">Contacto</a></li>
-                <li><a href="./pages/productos.html">Productos</a></li>
-                <li><a href="./pages/nosotros.html">Nosotros</a></li>
-                <li><a href="./pages/sucursales.html">Sucursales</a></li>
-                 </ul>
+        <footer class="bg-light text-purple py-4">
+            <div class="container">
+                <div class="row text-center text-md-start">
+                    <!-- Sección "Nosotros" -->
+                    <div class="col-md-3 footer-column">
+                        <h3>Nosotros</h3>
+                        <p>Historia y misión de nuestra empresa.</p>
+                    </div>
+        
+                    <!-- Sección "Contenidos" -->
+                    <div class="col-md-3 footer-column">
+                        <h3>Contenidos</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="../index.html" class="footer-link">Inicio</a></li>
+                            <li><a href="./contacto.html" class="footer-link">Contacto</a></li>
+                            <li><a href="./productos.html" class="footer-link">Productos</a></li>
+                            <li><a href="./nosotros.html" class="footer-link">Nosotros</a></li>
+                            <li><a href="./sucursales.html" class="footer-link">Sucursales</a></li>
+                        </ul>
+                    </div>
+        
+                    <!-- Sección "Contacto" -->
+                    <div class="col-md-3 footer-column">
+                        <h3>Contacto</h3>
+                        <p>Email: contacto@empresa.com</p>
+                        <p>Teléfono: +57 3045855030</p>
+                    </div>
+        
+                       <!-- Sección "Newsletter " -->
+           <div class="col-md-3 footer-column">
+            <h3>Suscríbete a nuestro newsletter</h3>
+            <form>
+                <input type="email" class="form-control" placeholder="Tu email" id="emailSuscripcion">
+                <button type="submit" class="btn btn-primary mt-2">Suscribirme</button>
+            </form>
+             <!-- Sección " Redes Sociales" -->
+            <p class="mt-3">Conéctate con nosotros</p>
+            <div class="d-flex gap-3">
+            <a href="https://facebook.com" target="_blank" class="text-purple">
+            <i class="fab fa-facebook fa-2x"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" class="text-purple">
+                <i class="fab fa-instagram fa-2x"></i>
+            </a>
             </div>
-            <div>
-                <h3>Ayuda</h3>
-                <ul>
-                <li><a href="#index.html">Inicio</a></li>
-                <li><a href="./pages/contacto.html">Contacto</a></li>
-                <li><a href="./pages/productos.html">Productos</a></li>
-                <li><a href="./pages/nosotros.html">Nosotros</a></li>
-                <li><a href="./pages/sucursales.html">Sucursales</a></li>
-
-             </ul>
         </div>
-            <div>
-                <h3>Suscríbete a nuestro newsletter</h3>
-                <form action="">
-                    <input type="email" placeholder="Tu email" id="emailSuscripcion">
-                    <input  type="submit" value="Suscribirme" id="suscribirme">
-                </form>
+                </div>
             </div>
-            <div>
-                <h3>Conectate con nosotros</h3>
-                <a href="">
-
-                </a>
-                <a href="">
-
-                </a>
-            </div>
-
-
         </footer>
+        
+        <!-- Bootstrap JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        
+        <!-- FontAwesome para íconos de redes sociales -->
+        <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
+        <a href="https://wa.me/573001234567" class="whatsapp-float" target="_blank" title="Chatea con nosotros por WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          
     </body>
 </html>
